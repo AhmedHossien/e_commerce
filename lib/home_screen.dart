@@ -1,3 +1,4 @@
+import 'package:e_commerce/bottom_nav.dart';
 import 'package:e_commerce/categories.dart';
 import 'package:e_commerce/product.dart';
 import 'package:e_commerce/product_items.dart';
@@ -190,23 +191,24 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: size.height * 0.080,
+              height: size.height * 0.070,
             ),
             Container(
               decoration: BoxDecoration(
                   color: Colors.grey.shade300,
                   borderRadius: BorderRadius.circular(size.height * 0.025)),
               child: TextField(
+                  textAlignVertical: TextAlignVertical.center,
                   decoration: InputDecoration(
-                hintText: 'Search',
-                prefixIcon: Icon(Icons.search_rounded),
-                enabledBorder: InputBorder.none,
-                focusedBorder: InputBorder.none,
-              )),
+                    hintText: 'Search',
+                    prefixIcon: Icon(Icons.search_rounded),
+                    enabledBorder: InputBorder.none,
+                    focusedBorder: InputBorder.none,
+                  )),
               margin: EdgeInsets.symmetric(horizontal: size.width * 0.025),
             ),
             SizedBox(
-              height: size.height * 0.040,
+              height: size.height * 0.035,
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: size.width * 0.025),
@@ -223,7 +225,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(
-              height: size.height * 0.040,
+              height: size.height * 0.035,
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: size.width * 0.025),
@@ -288,7 +290,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(
-              height: size.height * 0.040,
+              height: size.height * 0.035,
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: size.width * 0.025),
@@ -314,12 +316,12 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(
-              height: size.height * 0.030,
+              height: size.height * 0.0225,
             ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: size.width * 0.0125),
+                padding: EdgeInsets.symmetric(horizontal: size.height * 0.0125),
                 child: Row(
                   children: pro,
                 ),
@@ -328,40 +330,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: Container(
-        height: size.height * 0.075,
-        color: Colors.grey.shade300,
-        child: Row(
-          children: <Widget>[
-            GestureDetector(
-              onTap: () {},
-              child: Expanded(
-                  child: Text(
-                'Explore',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: size.height * 0.020, fontWeight: FontWeight.bold),
-              )),
-            ),
-            GestureDetector(
-              onTap: () {},
-              child: Expanded(
-                  child: Icon(
-                Icons.shopping_cart_outlined,
-                size: size.height * 0.04,
-              )),
-            ),
-            GestureDetector(
-              onTap: () {},
-              child: Expanded(
-                  child: Icon(
-                Icons.person,
-                size: size.height * 0.04,
-              )),
-            )
-          ],
-        ),
-      ),
+      bottomNavigationBar: Bottom(size: size),
     );
   }
 }
