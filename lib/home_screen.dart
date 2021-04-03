@@ -318,10 +318,10 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: size.height * 0.0225,
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: size.height * 0.0125),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: size.height * 0.0125),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
                 child: Row(
                   children: pro,
                 ),
