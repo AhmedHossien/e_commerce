@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:e_commerce/home_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {

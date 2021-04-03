@@ -1,7 +1,6 @@
 import 'package:e_commerce/categories.dart';
 import 'package:e_commerce/product.dart';
 import 'package:e_commerce/product_items.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -334,23 +333,32 @@ class _HomeScreenState extends State<HomeScreen> {
         color: Colors.grey.shade300,
         child: Row(
           children: <Widget>[
-            Expanded(
-                child: Text(
-              'Explore',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontSize: size.height * 0.020, fontWeight: FontWeight.bold),
-            )),
-            Expanded(
-                child: Icon(
-              Icons.shopping_cart_outlined,
-              size: size.height * 0.04,
-            )),
-            Expanded(
-                child: Icon(
-              Icons.person,
-              size: size.height * 0.04,
-            ))
+            GestureDetector(
+              onTap: () {},
+              child: Expanded(
+                  child: Text(
+                'Explore',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: size.height * 0.020, fontWeight: FontWeight.bold),
+              )),
+            ),
+            GestureDetector(
+              onTap: () {},
+              child: Expanded(
+                  child: Icon(
+                Icons.shopping_cart_outlined,
+                size: size.height * 0.04,
+              )),
+            ),
+            GestureDetector(
+              onTap: () {},
+              child: Expanded(
+                  child: Icon(
+                Icons.person,
+                size: size.height * 0.04,
+              )),
+            )
           ],
         ),
       ),
