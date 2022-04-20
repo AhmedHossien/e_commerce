@@ -304,12 +304,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   Spacer(),
-                  Text(
-                    'See all',
-                    style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      fontSize: size.height * 0.025,
-                      fontWeight: FontWeight.bold,
+                  GestureDetector(
+                    onTap: () {},
+                    child: Text(
+                      'See all',
+                      style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        fontSize: size.height * 0.025,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ],
